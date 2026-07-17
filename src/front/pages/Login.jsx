@@ -16,7 +16,7 @@ const Login = () => {
             password: passwordInput
         }
         try {
-            const response = await fetch(backendUrl + "login", {
+            const response = await fetch(`${backendUrl}api/login`, {
                 method: "POST",
                 body: JSON.stringify(newLogin),
                 headers: {

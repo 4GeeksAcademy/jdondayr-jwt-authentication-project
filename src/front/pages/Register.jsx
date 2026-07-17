@@ -17,7 +17,7 @@ const Register = () => {
             password: passwordInput
         }
         try {
-            const response = await fetch(backendUrl + "users", {
+            const response = await fetch(`${backendUrl}api/users`, {
                 method: "POST",
                 body: JSON.stringify(newUser),
                 headers: {

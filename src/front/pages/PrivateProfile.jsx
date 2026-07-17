@@ -13,7 +13,7 @@ const PrivateProfile = () => {
         dispatch({ type: "loading_user_info" })
         const JWToken = localStorage.getItem("jwtoken")
         try {
-            const response = await fetch(backendUrl + "users/me", {
+            const response = await fetch(`${backendUrl}api/users/me`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
